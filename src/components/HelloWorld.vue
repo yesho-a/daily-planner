@@ -2,8 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
-      For a guide and recipes on how to configure / customize this project,<br />
-      check out the
+      Use our app to plan your daily activities and improve on your productivity
     </p>
   </div>
 </template>
