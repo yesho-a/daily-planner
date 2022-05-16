@@ -4,10 +4,12 @@
 
 <script>
 //import HelloWorld from "./components/HelloWorld.vue";
-
+import ToDos from "./components/ToDos.vue";
 export default {
   name: "App",
-  components: {},
+  components: {
+    ToDos,
+  },
   data() {
     return {
       todos: [
