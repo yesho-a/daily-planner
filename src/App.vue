@@ -1,5 +1,5 @@
 <template>
-  <ToDos />
+  <ToDos v-bind:todos="todos" />
 </template>
 
 <script>
