@@ -1,5 +1,5 @@
 <template>
-  <ToDos v-bind:todos="todos" />
+  <ToDos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
 </template>
 
 <script>
@@ -30,6 +30,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    deleteTodo(id) {
+      this.todos = this.todos.filter((todo) => todo.id !== id);
+    },
   },
 };
 </script>
