@@ -1,14 +1,33 @@
 <template>
-  <HelloWorld msg="Welcome to Your Daily Planner App" />
+  {{ msg }}
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+//import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
   name: "App",
-  components: {
-    HelloWorld,
+  components: {},
+  data() {
+    return {
+      todos: [
+        {
+          id: 1,
+          title: "Todo One",
+          completed: false,
+        },
+        {
+          id: 2,
+          title: "Todo Two",
+          completed: true,
+        },
+        {
+          id: 3,
+          title: "Todo Three",
+          completed: false,
+        },
+      ],
+    };
   },
 };
 </script>
