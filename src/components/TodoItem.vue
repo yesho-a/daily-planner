@@ -8,9 +8,14 @@
 export default {
   name: "TodoItem",
   props: ["todo"],
+  data() {
+    return {
+      tx: this.todo,
+    };
+  },
   methods: {
     markComplete() {
-      this.todo.completed = !this.todo.completed;
+      this.tx.completed = !this.tx.completed;
     },
   },
 };
