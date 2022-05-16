@@ -1,9 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      Use our app to plan your daily activities and improve on your productivity
-    </p>
+    <h1>Hello World</h1>
   </div>
 </template>
 
