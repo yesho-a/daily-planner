@@ -1,5 +1,5 @@
 <template>
-  {{ msg }}
+  <ToDos />
 </template>
 
 <script>
