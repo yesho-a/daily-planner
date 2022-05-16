@@ -2,7 +2,7 @@
   <div>
     <h1>Todos</h1>
     <div v-bind:key="todo.id" v-for="todo in todos">
-      <TodoItem />
+      <TodoItem v-bind:todo="todo" />
     </div>
   </div>
 </template>
