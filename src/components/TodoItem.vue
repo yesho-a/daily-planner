@@ -10,7 +10,7 @@ export default {
   props: ["todo"],
   methods: {
     markComplete() {
-      console.log("Marked Complete");
+      this.todo.completed = !this.todo.completed;
     },
   },
 };
