@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="todo-list">
     <p>{{ todo.title }}</p>
   </div>
 </template>
