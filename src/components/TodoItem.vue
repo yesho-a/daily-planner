@@ -1,6 +1,9 @@
 <template>
   <div class="todo-list" v-bind:class="{'is-complete': todo.completed}">
-    <p><input type="checkbox" v-on:change="markComplete" /> {{ todo.title }}</p>
+    <p>
+      <input type="checkbox" v-on:change="markComplete" /> {{ todo.title }}
+      <button class="del">x</button>
+    </p>
   </div>
 </template>
 
