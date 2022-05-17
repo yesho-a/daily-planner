@@ -1,6 +1,6 @@
 <template>
   <TodoHeader />
-  <AddTodo />
+  <AddTodo v-on:add-todo="addTodo" />
   <ToDos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
 </template>
 
