@@ -1,21 +1,18 @@
 <template>
-  <TodoHeader />
   <AddTodo v-on:add-todo="addTodo" />
   <ToDos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
 </template>
 
 <script>
 //import HelloWorld from "./components/HelloWorld.vue";
-import ToDos from "./components/ToDos.vue";
-import TodoHeader from "./components/layouts/TodoHeader.vue";
-import AddTodo from "./components/AddTodo.vue";
+import ToDos from "../components/ToDos.vue";
+import AddTodo from "../components/AddTodo.vue";
 import axios from "axios";
 
 export default {
   name: "App",
   components: {
     ToDos,
-    TodoHeader,
     AddTodo,
   },
   data() {

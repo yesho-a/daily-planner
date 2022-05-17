@@ -1,102 +1,39 @@
 <template>
   <TodoHeader />
-  <AddTodo v-on:add-todo="addTodo" />
-  <ToDos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
+
+  <router-view />
 </template>
 
 <script>
-//import HelloWorld from "./components/HelloWorld.vue";
-import ToDos from "./components/ToDos.vue";
 import TodoHeader from "./components/layouts/TodoHeader.vue";
-import AddTodo from "./components/AddTodo.vue";
-import axios from "axios";
 
 export default {
-  name: "App",
+  name: "app",
   components: {
-    ToDos,
     TodoHeader,
-    AddTodo,
-  },
-  data() {
-    return {
-      todos: [
-        // {
-        //   id: 1,
-        //   title: "Todo One",
-        //   completed: false,
-        // },
-        // {
-        //   id: 2,
-        //   title: "Todo Two",
-        //   completed: true,
-        // },
-        // {
-        //   id: 3,
-        //   title: "Todo Three",
-        //   completed: false,
-        // },
-      ],
-    };
-  },
-  methods: {
-    // deleteTodo(id) {
-    //   this.todos = this.todos.filter((todo) => todo.id !== id);
-    // },
-    deleteTodo(id) {
-      axios
-        .delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
-        .then(() => (this.todos = this.todos.filter((todo) => todo.id !== id)))
-        .catch((err) => console.log(err));
-    },
-    // addTodo(newTodo) {
-    //   this.todos = [...this.todos, newTodo];
-    // },
-
-    addTodo(newTodo) {
-      const {title, completed} = newTodo;
-
-      axios
-        .post("https://jsonplaceholder.typicode.com/todos", {
-          title,
-          completed,
-        })
-        .then((res) => (this.todos = [...this.todos, res.data]))
-        .catch((err) => console.log(err));
-    },
-  },
-
-  created() {
-    axios
-      .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
-      .then((res) => (this.todos = res.data))
-      .catch((err) => console.log(err));
   },
 };
 </script>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 2.4d;
+nav {
+  padding: 30px;
 }
 
-.btn {
-  display: inline-block;
-  border: none;
-  background: #555;
-  color: #fff;
-  padding: 7px 20px;
-  cursor: pointer;
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
 }
 
-.btn:hover {
-  background: #666;
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
