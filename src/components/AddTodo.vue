@@ -25,7 +25,7 @@ export default {
     addTodo(e) {
       e.preventDefault();
       const newTodo = {
-        // id:uuid,
+        id: uuid,
         title: this.title,
         completed: false,
       };
