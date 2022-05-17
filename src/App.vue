@@ -41,6 +41,9 @@ export default {
     deleteTodo(id) {
       this.todos = this.todos.filter((todo) => todo.id !== id);
     },
+    addTodo(newTodo) {
+      this.todos = [...this.todos, newTodo];
+    },
   },
 };
 </script>
