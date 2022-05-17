@@ -7,6 +7,7 @@
 //import HelloWorld from "./components/HelloWorld.vue";
 import ToDos from "./components/ToDos.vue";
 import Header from "./components/layouts/Header.vue";
+import AddTodo from "./components/AddTodo.vue";
 export default {
   name: "App",
   components: {
