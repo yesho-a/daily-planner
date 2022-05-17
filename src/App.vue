@@ -5,10 +5,12 @@
 <script>
 //import HelloWorld from "./components/HelloWorld.vue";
 import ToDos from "./components/ToDos.vue";
+import Header from "./components/layouts/Header.vue";
 export default {
   name: "App",
   components: {
     ToDos,
+    Header,
   },
   data() {
     return {
