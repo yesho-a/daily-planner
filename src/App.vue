@@ -1,4 +1,5 @@
 <template>
+  <header />
   <ToDos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
 </template>
 
