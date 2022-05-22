@@ -65,7 +65,7 @@ export default {
 
   created() {
     axios
-      .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
+      .get("http://127.0.0.1:8000/api/tasks")
       .then((res) => (this.todos = res.data))
       .catch((err) => console.log(err));
   },
