@@ -25,9 +25,6 @@ export default {
     };
   },
   methods: {
-    // deleteTodo(id) {
-    //   this.todos = this.todos.filter((todo) => todo.id !== id);
-    // },
     deleteTodo(id) {
       axios
         .delete(`http://127.0.0.1:8000/api/delete/${id}`)
@@ -37,12 +34,9 @@ export default {
     editTodo(id) {
       axios
         .put(`http://127.0.0.1:8000/api/update/${id}`)
-        .then(console.log("Hello welcome to visit me"))
+        .then()
         .catch((err) => console.log(err));
     },
-    // addTodo(newTodo) {
-    //   this.todos = [...this.todos, newTodo];
-    // },
 
     addTodo(newTodo) {
       const {task, completed} = newTodo;
