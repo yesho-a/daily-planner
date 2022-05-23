@@ -36,8 +36,8 @@ export default {
     },
     editTodo(id) {
       axios
-        .delete(`http://127.0.0.1:8000/api/update/${id}`)
-        .then(() => (this.todos = this.todos.filter((todo) => todo.id !== id)))
+        .put(`http://127.0.0.1:8000/api/update/${id}`)
+        .then(console.log("Hello welcome to visit me"))
         .catch((err) => console.log(err));
     },
     // addTodo(newTodo) {
