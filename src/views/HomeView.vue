@@ -51,7 +51,7 @@ export default {
     // },
 
     addTodo(newTodo) {
-      const {title, completed} = newTodo;
+      const {task, completed} = newTodo;
 
       axios
         .post("http://127.0.0.1:8000/api/tasks/create", {
