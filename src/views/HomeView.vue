@@ -42,7 +42,7 @@ export default {
     // },
     deleteTodo(id) {
       axios
-        .delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        .delete(`http://127.0.0.1:8000/api/delete/{id}/${id}`)
         .then(() => (this.todos = this.todos.filter((todo) => todo.id !== id)))
         .catch((err) => console.log(err));
     },
