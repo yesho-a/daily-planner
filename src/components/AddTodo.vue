@@ -1,12 +1,7 @@
 <template>
   <div>
     <form @submit.prevent="addTodo">
-      <input
-        type="text"
-        v-model="title"
-        name="title"
-        placeholder="Add Todo..."
-      />
+      <input type="text" v-model="task" name="task" placeholder="Add Todo..." />
       <input type="submit" value="Submit" class="btn" />
     </form>
   </div>
@@ -18,7 +13,7 @@ export default {
   name: "AddTodo",
   data() {
     return {
-      title: "",
+      task: "",
     };
   },
   methods: {
@@ -26,11 +21,11 @@ export default {
       e.preventDefault();
       const newTodo = {
         // id: uuid,
-        title: this.title,
+        task: this.task,
         completed: false,
       };
       this.$emit("add-todo", newTodo);
-      this.title = "";
+      this.task = "";
     },
   },
 };
