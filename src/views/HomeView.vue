@@ -1,6 +1,10 @@
 <template>
   <AddTodo v-on:add-todo="addTodo" />
-  <ToDos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
+  <ToDos
+    v-bind:todos="todos"
+    v-on:del-todo="deleteTodo"
+    v-on:edit-todo="editTodo"
+  />
 </template>
 
 <script>
@@ -27,6 +31,12 @@ export default {
     deleteTodo(id) {
       axios
         .delete(`http://127.0.0.1:8000/api/delete/${id}`)
+        .then(() => (this.todos = this.todos.filter((todo) => todo.id !== id)))
+        .catch((err) => console.log(err));
+    },
+    editTodo(id) {
+      axios
+        .delete(`http://127.0.0.1:8000/api/update/${id}`)
         .then(() => (this.todos = this.todos.filter((todo) => todo.id !== id)))
         .catch((err) => console.log(err));
     },
