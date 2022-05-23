@@ -40,7 +40,9 @@ export default {
 
       axios
         .put(`http://127.0.0.1:8000/api/update/${id}`, {completed: true})
-        .then()
+        .then((res) => {
+          console.log(res.data);
+        })
         .catch((err) => console.log(err));
     },
 
