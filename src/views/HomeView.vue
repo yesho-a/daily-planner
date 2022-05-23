@@ -55,7 +55,7 @@ export default {
 
       axios
         .post("http://127.0.0.1:8000/api/tasks/create", {
-          title,
+          task,
           completed,
         })
         .then((res) => (this.todos = [...this.todos, res.data]))
