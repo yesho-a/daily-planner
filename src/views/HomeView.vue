@@ -32,12 +32,6 @@ export default {
         .catch((err) => console.log(err));
     },
     editTodo(id) {
-      // this.todos.forEach((todo) => {
-      //   if (todo.id == id) {
-      //     todo.completed = true;
-      //   }
-      // });      this.tx.completed = !this.tx.completed;
-
       axios
         .put(`http://127.0.0.1:8000/api/update/${id}`, {completed: true})
         .then((res) => {
